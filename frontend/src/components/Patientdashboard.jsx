@@ -257,13 +257,7 @@ useEffect(() => {
       <h1 className='flex absolute end-80 text-3xl top-7 font-Lexend'>Patient Dashboard</h1>
         <div className='bg-[#e308ea] space-x-16 p-4 flex justify-between'>
             
-        <div className='flex bg-black w-fit h-fit  rounded-xl '>
-                <div className='p-2 pl-3 '>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="0.5em" height="2em" viewBox="0 0 12 24"><path fill="white" fill-rule="evenodd" d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z"/></svg>
-                </div>
-
-                <Link to ="/Doctordashboard"><button class=" text-white text-[16px] font-medium font-['Lexend']  pr-4 pt-3">Back</button></Link>
-            </div>  
+        
             
                 <button className='flex bg-black rounded-2xl p-4 text-white font-Lexend px-6 '>
                   <div className='pr-1'><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5"><path d="M12 20a8 8 0 1 1 0-16" opacity="0.5"/><path stroke-linejoin="round" d="M10 12h10m0 0l-3-3m3 3l-3 3"/></g></svg></div>
