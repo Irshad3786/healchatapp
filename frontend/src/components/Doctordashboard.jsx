@@ -29,7 +29,7 @@ function Doctordashboard() {
 
 
   useEffect(()=>{
-    axios.get('http://localhost:3001/auth/doctorverify')
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/doctorverify`)
     .then(res=> {
       if(res.data.status){
         
@@ -39,7 +39,7 @@ function Doctordashboard() {
     })
     .catch(error=>console.log(error))
 
-    axios.get("http://localhost:3001/doctorprofile")
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/doctorprofile`)
     .then(res=>{
       setdoctorname(res.data.doctoruser.doctorname)
     })

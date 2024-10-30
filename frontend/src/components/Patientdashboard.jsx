@@ -61,7 +61,7 @@ function Patientdashboard() {
 
 
   useEffect(() => {
-    axios.get('http://localhost:3001/auth/patientverify')
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/patientverify`)
       .then(res => {
         if (!res.data.status) {
           navigate("/Signup");

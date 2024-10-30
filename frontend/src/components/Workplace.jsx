@@ -39,12 +39,12 @@ function Workplace() {
 
 
     useEffect(() => {
-      axios.get('http://localhost:3001/auth/doctorverify')
+      axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/doctorverify`)
         .then(res => {
           if (!res.data.status) {
             navigate("/Signup");
           }else{
-            axios.get("http://localhost:3001/doctorprofile")
+            axios.get(`${import.meta.env.VITE_BACKEND_URL}/doctorprofile`)
             .then((res)=>{
               
               setdoctorid(res.data.doctoruser._id);
@@ -59,7 +59,7 @@ function Workplace() {
        
 
         if(patientloginid){
-          axios.post("http://localhost:3001/getpatientid",{patientloginid})
+          axios.post(`${import.meta.env.VITE_BACKEND_URL}/getpatientid`,{patientloginid})
           .then(res=>{
             setsenderid(res.data[0]._id) 
             setpatientdata(res.data[0])
@@ -72,7 +72,7 @@ function Workplace() {
 
         if (doctorid && senderid) {
 
-          axios.post("http://localhost:3001/getchats",{doctorid:doctorid,patientid:senderid})
+          axios.post(`${import.meta.env.VITE_BACKEND_URL}/getchats`,{doctorid:doctorid,patientid:senderid})
           .then(res=>{
             setfinalresponse(res.data.sendermessage)
             

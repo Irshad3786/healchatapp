@@ -62,7 +62,7 @@ function Signin() {
     const doctorLoginSubmit = (e)=>{
         e.preventDefault()
 
-        axios.post("http://localhost:3001/DoctorLoginMail",{doctoremail , medicallicienceno})
+        axios.post(`${import.meta.env.VITE_BACKEND_URL}/DoctorLoginMail`,{doctoremail , medicallicienceno})
         .then(response=>{
             if(response.data==="mailmatched" ){
                 alert("Email is Already Register")
@@ -75,7 +75,7 @@ function Signin() {
                     alert("The Confirm Password Did Not Match")
             
                 }else{
-                    axios.post('http://localhost:3001/DoctorLogin',{doctorname,doctoremail,doctorphoneno,medicallicienceno,doctorpassword,doctorspecialization})
+                    axios.post(`${import.meta.env.VITE_BACKEND_URL}/DoctorLogin`,{doctorname,doctoremail,doctorphoneno,medicallicienceno,doctorpassword,doctorspecialization})
                     .then(result => console.log(" submited successfull"))
                     .catch(error => console.log(error))
                     navigate('/Signin')
@@ -95,7 +95,7 @@ function Signin() {
 
     const patientLoginSubmit = (e)=>{
         e.preventDefault()
-        axios.post("http://localhost:3001/PatientLoginMail",{patientemail , patientid})
+        axios.post(`${import.meta.env.VITE_BACKEND_URL}/PatientLoginMail`,{patientemail , patientid})
         .then(response => {
             if(response.data==="Emailmatched"){
                 alert("Email already exist")
@@ -117,7 +117,7 @@ function Signin() {
                     alert("Give the Correct Height")
                     
                 }else{
-                    axios.post("http://localhost:3001/PatientLogin",{patientname,patientemail,patientphoneno,patientid,patientpassword,patientage,patientbloodgroup,patientheight,patientweight,patientproblem})
+                    axios.post(`${import.meta.env.VITE_BACKEND_URL}/PatientLogin`,{patientname,patientemail,patientphoneno,patientid,patientpassword,patientage,patientbloodgroup,patientheight,patientweight,patientproblem})
                     .then(result => console.log("submited succesfully"))
                     .catch(error=>console.log(error))
                     navigate('/Signin')

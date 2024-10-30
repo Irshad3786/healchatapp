@@ -20,15 +20,15 @@ function Yourpatients() {
 
 
  useEffect(()=>{
-    axios.get('http://localhost:3001/auth/doctorverify')
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/doctorverify`)
     .then(res=> {
       if(res.data.status){
-        axios.get("http://localhost:3001/doctorprofile")
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/doctorprofile`)
         .then(res => {
           setdoctorname(res.data.doctoruser.doctorname);
           emailid(res.data.doctoruser.doctoremail);
           
-          axios.post("http://localhost:3001/yourpatients", { doctoremail: res.data.doctoruser.doctoremail })
+          axios.post(`${import.meta.env.VITE_BACKEND_URL}/yourpatients`, { doctoremail: res.data.doctoruser.doctoremail })
             .then(res => {
               setresponse(res.data)
             })

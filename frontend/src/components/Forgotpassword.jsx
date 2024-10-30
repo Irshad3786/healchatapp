@@ -21,7 +21,7 @@ function Forgotpassword() {
   const submiting =(e)=>{
     e.preventDefault()
     if (optionrealvalue == "doctor"){
-        axios.post("http://localhost:3001/forgotpassworddoctor",{email})
+        axios.post(`${import.meta.env.VITE_BACKEND_URL}/forgotpassworddoctor`,{email})
         .then(res=>{
           if(res.data.status){
             alert("check your Email for reset Link")
@@ -32,7 +32,7 @@ function Forgotpassword() {
       })
 
     }else if(optionrealvalue == "patient"){
-      axios.post("http://localhost:3001/forgotpasswordpatient",{email})
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/forgotpasswordpatient`,{email})
         .then(res=>{
           if(res.data.status){
             alert("check your Email for reset Link")
