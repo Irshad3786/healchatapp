@@ -22,7 +22,7 @@ const multer = require('multer')
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://healchat.vercel.app",
     methods: ["GET", "POST"],
     credentials: true
   }
@@ -33,7 +33,7 @@ app.use(express.json())
 
 app.use(cors(
   {
-    origin:["http://localhost:5173"],
+    origin:["https://healchat.vercel.app"],
     methods: ["GET","POST"],
     credentials: true
   }
@@ -240,7 +240,7 @@ app.post("/Doctorsignin", async (req, res) => {
           from: 'mdhospitalsmakeyousmile@gmail.com',
           to: email, 
           subject: 'RESET PASSWORD !!!',
-          text: `http://localhost:5173/Resetpassword/${emailtoken}`
+          text: `https://healchat.vercel.app/Resetpassword/${emailtoken}`
         };
         
         transporter.sendMail(mailOptions, function(error, info){
@@ -280,7 +280,7 @@ app.post("/Doctorsignin", async (req, res) => {
         from: 'mdhospitalsmakeyousmile@gmail.com',
         to: email, 
         subject: 'RESET PASSWORD !!!',
-        text: `http://localhost:5173/Resetpasswordpatient/${emailtoken}`
+        text: `https://healchat.vercel.app/Resetpasswordpatient/${emailtoken}`
       };
       
       transporter.sendMail(mailOptions, function(error, info){
