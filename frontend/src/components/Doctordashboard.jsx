@@ -31,7 +31,7 @@ function Doctordashboard() {
   useEffect(()=>{
    const verifyDoctor = async () => {
       // Poll every 100ms until the 'doctortoken' cookie is available
-      while (!document.cookie.includes('doctortoken=')) {
+      while (!document.cookie.includes('doctortoken')) {
         await new Promise(resolve => setTimeout(resolve, 100)); // Wait 100ms
       }
 
