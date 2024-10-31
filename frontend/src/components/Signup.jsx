@@ -35,7 +35,7 @@ function Signup() {
 
     e.preventDefault()
     if (loginoption==="doctorlogin"){
-      axios.post("http://localhost:3001/Doctorsignin",{email,password})
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/Doctorsignin`,{email,password})
       .then(response=>{
         if (response.data === "success") {
           navigate("/Doctordashboard")
@@ -47,7 +47,7 @@ function Signup() {
         console.error("There was an error with the doctor login!", error);
       });
     }else if(loginoption === "patientlogin"){
-      axios.post("http://localhost:3001/Patientsignin",{email,password})
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/Patientsignin`,{email,password})
       .then(response=>{
         if (response.data==="success"){
           navigate("/Patientdashboard",{state:{email}})
