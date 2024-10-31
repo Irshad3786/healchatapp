@@ -34,7 +34,7 @@ function Doctordashboard() {
       if(res.data.status){
         
       }else{
-        navigate("/Signup)
+        navigate("/Signup")
       }
     })
     .catch(error=>console.log(error))
