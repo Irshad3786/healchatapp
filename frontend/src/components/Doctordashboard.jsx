@@ -38,6 +38,7 @@ function Doctordashboard() {
       // Once the cookie is found, proceed with the verification request
       try {
         const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/doctorverify`);
+        console.log(res)
         if (!res.data.status) {
           navigate("/Signup");
         }
