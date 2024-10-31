@@ -29,7 +29,7 @@ function Doctordashboard() {
 
 
   useEffect(()=>{
-  axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/doctorverify,{ withCredentials: true }`)
+  axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/doctorverify, { withCredentials: true }`)
     .then(res=> {
       if(res.data.status){
         
