@@ -343,7 +343,7 @@ app.post('/resetpasswordpatient/:patienttoken',async(req,res)=>{
 app.get('/doctorprofile',async(req,res)=>{
   try {
     const doctortoken = await req.cookies.doctortoken
-    const decoded = await jwt.verify(doctortoken, 'IRSHADJWTCODE');
+    const decoded = await jwt.verify(doctortoken, process.env.JWTCODE);
     req.user = decoded
     const doctoremail = await decoded.doctoremail;
     const doctoruser = await Doctorloginmodel.findOne({doctoremail:doctoremail})
