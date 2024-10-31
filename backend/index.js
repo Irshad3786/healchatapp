@@ -183,7 +183,6 @@ app.post("/Doctorsignin", async (req, res) => {
           return res.json({ status: false, message: "No token" });
         }
         const decoded = await jwt.verify(doctortoken, process.env.JWTCODE);
-        console.log(decoded)
         req.user = decoded;
         next();
       } catch (error) {
