@@ -47,7 +47,7 @@ function Doctordashboard() {
       error=>console.log(error)
     )
 
-    axios.get("http://localhost:3001/doctorprofile")
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/doctorprofile`)
     .then(res=>{
       emailid(res.data.doctoruser.doctoremail)
     })
@@ -64,7 +64,7 @@ function Doctordashboard() {
   
 
   const profilesubmit = ()=>{
-    axios.get("http://localhost:3001/doctorprofile")
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/doctorprofile`)
     .then(res=>{
       if (res){
         setprofileview(true)
@@ -82,7 +82,7 @@ function Doctordashboard() {
 
 
   const patientslist = ()=>{
-    axios.get("http://localhost:3001/patientslist")
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/patientslist`)
     .then(res=>{
         setpatientdatalist(res.data)
         setdataview(true)
@@ -96,7 +96,7 @@ function Doctordashboard() {
 
   const assigningdoctor = (patientid)=>{
 
-    axios.post("http://localhost:3001/assigndoctor",{patientid,doctorname,email})
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/assigndoctor`,{patientid,doctorname,email})
     .then( res =>{
       if(res.data.status){
         setReload(!reload);
