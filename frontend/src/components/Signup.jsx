@@ -44,7 +44,7 @@ function Signup() {
         }
       })
       .catch(error => { 
-        console.error("There was an error with the doctor login!", error);
+        console.error("There was an error with the doctor login!!", error);
       });
     }else if(loginoption === "patientlogin"){
       axios.post(`${import.meta.env.VITE_BACKEND_URL}/Patientsignin`,{email,password})
