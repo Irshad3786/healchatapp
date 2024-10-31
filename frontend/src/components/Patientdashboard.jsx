@@ -66,7 +66,7 @@ function Patientdashboard() {
         if (!res.data.status) {
           navigate("/Signup");
         }else{
-          axios.get("http://localhost:3001/patientprofile")
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}/patientprofile`)
           .then((res)=> {
            
             
@@ -95,7 +95,7 @@ function Patientdashboard() {
 useEffect(() => {
   
   if(senderemail){
-    axios.post("http://localhost:3001/getdoctorid",{senderemail})
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/getdoctorid`,{senderemail})
     .then(res=>{
     
       
@@ -111,7 +111,7 @@ useEffect(() => {
   useEffect(() => {
     
     if(patientid && senderid){
-      axios.post("http://localhost:3001/getchats",{doctorid:senderid,patientid:patientid})
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/getchats`,{doctorid:senderid,patientid:patientid})
       .then(res=>setresponsemessage(res.data.sendermessage))
       .catch(error=>console.log(error)
       )}
@@ -122,7 +122,7 @@ useEffect(() => {
 
   useEffect(() => {
     
-    const newsocket = io("http://localhost:3001/chat")
+    const newsocket = io(`${import.meta.env.VITE_BACKEND_URL}/chat`)
     
 
     setsocket(newsocket)
@@ -213,7 +213,7 @@ useEffect(() => {
         const imageurl = await uploadimage(images)
         
         
-        axios.post("http://localhost:3001/setimages",{imageurl : imageurl,patientid:patientrealid})
+        axios.post(`${import.meta.env.VITE_BACKEND_URL}/setimages`,{imageurl : imageurl,patientid:patientrealid})
         .then((res)=>res)
         .catch((error)=>{console.log(error)})
         
@@ -233,7 +233,7 @@ useEffect(() => {
 
 
   const deletingimage = (data) =>{
-    axios.post("http://localhost:3001/deleteimage",{data,patientrealid})
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/deleteimage`,{data,patientrealid})
     .then((res)=> res)
     .catch((error)=>console.log(error))
     
