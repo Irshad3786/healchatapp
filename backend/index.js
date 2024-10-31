@@ -120,7 +120,8 @@ app.post("/PatientLogin",(req,res)=>{
 
 app.post("/Doctorsignin", async (req, res) => {
     const { email, password } = req.body;
-  
+
+    console.log(email)
   
     if (!email || !password) {
       return res.status(400).json("Email and password are required");
