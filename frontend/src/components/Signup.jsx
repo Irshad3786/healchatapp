@@ -24,7 +24,7 @@ function Signup() {
 
 
   const submiting = (e)=>{
-
+    e.preventDefault()
     if (email==="" && password ===""){
       alert("please enter Email and Password")
     }else if(email===""){
@@ -33,7 +33,7 @@ function Signup() {
       alert("please enter Password ")
     }
 
-    e.preventDefault()
+    
     if (loginoption==="doctorlogin"){
       axios.post(`${import.meta.env.VITE_BACKEND_URL}/Doctorsignin`,{email,password})
       .then(response=>{
