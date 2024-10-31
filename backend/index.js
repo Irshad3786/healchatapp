@@ -133,7 +133,7 @@ app.post("/Doctorsignin", async (req, res) => {
         const match = await bcrypt.compare(password, response.doctorpassword);
         if (match) {
           const doctortoken = jwt.sign({doctoremail :response.doctoremail},process.env.JWTCODE,{expiresIn:"1d"})
-          res.cookie("doctortoken", doctortoken)
+          res.cookie("doctortoken", doctortoken,{ secure: true, httpOnly: true, sameSite: 'Strict' })
           res.json("success");
         } else {
           res.json("password is incorrect");
@@ -161,7 +161,7 @@ app.post("/Doctorsignin", async (req, res) => {
         const match = await bcrypt.compare(password, response.patientpassword);
         if (match) {
           const patienttoken = jwt.sign({patientemail :response.patientemail},process.env.JWTCODE,{expiresIn:"1d"})
-          res.cookie("patienttoken", patienttoken)
+          res.cookie("patienttoken", patienttoken,{ secure: true, httpOnly: true, sameSite: 'Strict' })
           res.json("success");
         } else {
           res.json("password is incorrect");
