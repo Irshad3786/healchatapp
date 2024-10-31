@@ -32,7 +32,7 @@ function Doctordashboard() {
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/doctorverify`)
     .then(res=> {
       if(res.data.status){
-        
+        console.log(res.data.status)
       }else{
         navigate("/Signup")
       }
