@@ -88,7 +88,7 @@ function Workplace() {
 
 
     useEffect(() => {
-      const newsocket = io("http://localhost:3001/chat",{
+      const newsocket = io(`${import.meta.env.VITE_BACKEND_URL}/chat`,{
         transports: ['websocket']
       })
       setsocket(newsocket)
