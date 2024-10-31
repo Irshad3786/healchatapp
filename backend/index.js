@@ -33,7 +33,7 @@ app.use(express.json())
 
 app.use(cors(
   {
-    origin:["https://healchat.vercel.app"],
+    origin:"https://healchat.vercel.app",
     methods: ["GET","POST"],
     credentials: true
   }
