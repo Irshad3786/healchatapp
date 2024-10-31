@@ -31,7 +31,7 @@ function Home() {
     <div className='w-full h-full bg-black'>
         <header class="w-full h-24 bg-[#e308ea] flex space-x-4 ">
           <nav className='flex  justify-between items-center space-x-8'>
-            <div class=" text-white text-4xl font-bold font-['Lexend'] leading-[45.12px] tracking-wide flex px-20">HealChats</div>
+            <div class=" text-white text-4xl font-bold font-['Lexend'] leading-[45.12px] tracking-wide flex px-20">HealChat</div>
             <div className='flex space-x-14 px-28'>
                 <div className='flex space-x-1 '>
                       <svg  width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" d="M4 22q-.825 0-1.412-.587T2 20V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v12q0 .825-.587 1.413T20 22zm6-16h4V4h-4zm1 9v3h2v-3h3v-2h-3v-3h-2v3H8v2z"/></svg>
