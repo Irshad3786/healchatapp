@@ -34,7 +34,6 @@ function Doctordashboard() {
       if(res.data.status){
         
       }else{
-        console.log("no token verify)
         navigate("/Signup")
       }
     })
