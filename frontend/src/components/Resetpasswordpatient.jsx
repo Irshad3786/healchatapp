@@ -14,7 +14,7 @@ function Resetpassword() {
   const submiting= (e)=>{
     e.preventDefault()
     if (password === confpassword){
-      axios.post(`http://localhost:3001/resetpasswordpatient/${patienttoken}`,{password} )
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/resetpasswordpatient/${patienttoken}`,{password} )
       .then(res=>{
         if(res.data.status){
           navigation("/Signin")
