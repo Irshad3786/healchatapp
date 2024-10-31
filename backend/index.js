@@ -217,7 +217,6 @@ app.post("/Doctorsignin", async (req, res) => {
   
 
   app.get('/auth/doctorverify',doctorverifyUser(),(req,res)=>{
-    console.log(res.json({status: true,message:"authorized"}))
     return res.json({status: true,message:"authorized"})
   })
 
