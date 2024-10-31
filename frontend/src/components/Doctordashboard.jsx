@@ -29,15 +29,24 @@ function Doctordashboard() {
 
 
   useEffect(()=>{
-    axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/doctorverify`)
-    .then(res=> {
-      if(res.data.status){
-        
-      }else{
-        navigate("/Signup")
+   const verifyDoctor = async () => {
+      // Poll every 100ms until the 'doctortoken' cookie is available
+      while (!document.cookie.includes('doctortoken=')) {
+        await new Promise(resolve => setTimeout(resolve, 100)); // Wait 100ms
       }
-    })
-    .catch(error=>console.log(error))
+
+      // Once the cookie is found, proceed with the verification request
+      try {
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/doctorverify`);
+        if (!res.data.status) {
+          navigate("/Signup");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    verifyDoctor();
 
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/doctorprofile`)
     .then(res=>{
