@@ -129,10 +129,13 @@ app.post("/Doctorsignin", async (req, res) => {
   
     try {
       const response = await Doctorloginmodel.findOne({ doctoremail: email });
+      console.log(response)
       if (response) {
         const match = await bcrypt.compare(password, response.doctorpassword);
+        console.log(match)
         if (match) {
           const doctortoken = jwt.sign({doctoremail :response.doctoremail},process.env.JWTCODE,{expiresIn:"1d"})
+          console.log(doctortoken)
           res.cookie("doctortoken", doctortoken,{ secure: true, httpOnly: true, sameSite: 'Strict' })
           res.json("success");
         } else {
