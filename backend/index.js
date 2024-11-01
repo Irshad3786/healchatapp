@@ -36,7 +36,8 @@ app.use(cors(
   {
     origin:"https://healchat.vercel.app",
     methods: ["GET","POST"],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"]
   }
 
 
