@@ -24,7 +24,8 @@ const io = new Server(server, {
   cors: {
     origin: "https://healchat.vercel.app",
     methods: ["GET", "POST"],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"]
   }
 });
 
