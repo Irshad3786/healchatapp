@@ -133,7 +133,7 @@ app.post("/Doctorsignin", async (req, res) => {
         const match = await bcrypt.compare(password, response.doctorpassword);
         if (match) {
           const doctortoken = jwt.sign({doctoremail :response.doctoremail},process.env.JWTCODE,{expiresIn:"1d"})
-          res.cookie("doctortoken", doctortoken,{ secure: false, httpOnly: true, sameSite: 'Strict' })
+          res.cookie("doctortoken", doctortoken,{ secure: true, httpOnly: true, sameSite: 'Strict' })
           res.json("success");
         } else {
           res.json("password is incorrect");
