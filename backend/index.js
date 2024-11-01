@@ -135,7 +135,12 @@ app.post("/Doctorsignin", async (req, res) => {
         const match = await bcrypt.compare(password, response.doctorpassword);
         if (match) {
           const doctortoken = jwt.sign({doctoremail :response.doctoremail},process.env.JWTCODE,{expiresIn:"1d"})
-          res.cookie("doctortoken", doctortoken,{ secure: true, httpOnly: true, sameSite: 'Strict' })
+            res.cookie("doctortoken", doctortoken, {
+            httpOnly: true, // Not accessible via JavaScript
+            secure: process.env.NODE_ENV === "production", // Set to true in production for HTTPS
+            sameSite: "None", // Adjust based on your needs
+            maxAge: 24 * 60 * 60 * 1000 // Cookie expiration set to 1 day
+            });
           res.json("success");
         } else {
           res.json("password is incorrect");
