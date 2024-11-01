@@ -120,7 +120,7 @@ function Doctordashboard() {
       <div className='w-full min-h-screen bg-black overflow-hidden '>
           <div className='w-full bg-[#e308ea] flex p-8 space-x-7'>
               <div>
-                <button className='flex bg-black rounded-2xl p-4 text-white font-Lexend px-6 ' onClick={profilesubmit}>
+                <button className='flex bg-black rounded-2xl p-4 text-white font-Lexend px-6 w-fit ' onClick={profilesubmit}>
                   <div className='pr-1'><svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg></div>
                   Profile</button>
               </div>
