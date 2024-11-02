@@ -134,11 +134,11 @@ function Doctordashboard() {
 
 
               <div>
-                <button className='flex bg-black rounded-2xl p-4 text-white font-Lexend px-6 ' onClick={mypatients}>
+                <button className='flex bg-black rounded-2xl p-4 text-white font-Lexend px-6 w-fit' onClick={mypatients}>
                   <div className='pr-1'><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" d="M16 14q-1.25 0-2.125-.875T13 11t.875-2.125T16 8t2.125.875T19 11t-.875 2.125T16 14m-5 6q-.425 0-.712-.288T10 19v-.9q0-.525.25-1t.7-.75q1.125-.675 2.388-1.012T16 15t2.663.338t2.387 1.012q.45.275.7.75t.25 1v.9q0 .425-.288.713T21 20zm-1-6H4q-.425 0-.712-.288T3 13t.288-.712T4 12h6q.425 0 .713.288T11 13t-.288.713T10 14m4-8H4q-.425 0-.712-.288T3 5t.288-.712T4 4h10q.425 0 .713.288T15 5t-.288.713T14 6m-2.9 4H4q-.425 0-.712-.288T3 9t.288-.712T4 8h8q-.35.425-.562.925T11.1 10"/></svg></div>
                   My Patients</button>
               </div>
-              <div className='flex items-center pl-40 font-bold '>
+              <div className='flex items-center pl-40 font-bold whitespace-nowrap'>
                 <h1 className='font-OpenSans text-3xl text-center'>DOCTOR DASHBOARD</h1>
               </div>
               <div className='pl-60'>
