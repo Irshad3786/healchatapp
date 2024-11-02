@@ -75,7 +75,7 @@ function Yourpatients() {
                     <span className='font-bold text-lg flex'><div className='text-[#e308ea] pr-4'>NAME</div>{data.patientname}</span>
                   </li>
                   <li className='flex items-center justify-between pr-8 '>
-                    <span className='font-bold text-lg flex'><div className='text-[#e308ea] pr-4'>PHONE NO</div> {data.patientphoneno}</span>
+                    <span className='font-bold text-lg flex'><div className='text-[#e308ea] pr-4 whitespace-nowrap'>PHONE NO</div> {data.patientphoneno}</span>
                     <button className='bg-[#e308ea] p-2 px-8 rounded-xl ml-16' onClick={()=>{openmaindash(data.patientname,data.patientid,doctoremail)}}>OPEN</button>
                   </li>
                   <li className='flex items-center justify-between pr-48 '>
