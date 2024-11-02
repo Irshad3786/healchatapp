@@ -127,7 +127,7 @@ function Doctordashboard() {
 
 
               <div>
-                <button className='flex bg-black rounded-2xl p-4 text-white font-Lexend px-6 ' onClick={patientslist} >
+                <button className=' bg-black rounded-2xl p-4 text-white font-Lexend px-6 ' onClick={patientslist} >
                   <div className='pr-1'><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="M3.25 7A.75.75 0 0 1 4 6.25h16a.75.75 0 0 1 0 1.5H4A.75.75 0 0 1 3.25 7m0 5a.75.75 0 0 1 .75-.75h11a.75.75 0 0 1 0 1.5H4a.75.75 0 0 1-.75-.75m0 5a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5H4a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg></div>
                   Patient List</button>
               </div>
