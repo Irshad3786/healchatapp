@@ -29,58 +29,66 @@ function Home() {
 
   return (
     <div className='w-full h-full bg-black'>
-        <header class="w-full h-24 bg-[#e308ea] flex space-x-4 ">
-          <nav className='flex  justify-between items-center space-x-8'>
-            <div class=" text-white text-4xl font-bold font-['Lexend'] leading-[45.12px] tracking-wide flex px-20">HealChat</div>
-            <div className='flex space-x-14 px-28'>
-                <div className='flex space-x-1 '>
-                      <svg  width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" d="M4 22q-.825 0-1.412-.587T2 20V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v12q0 .825-.587 1.413T20 22zm6-16h4V4h-4zm1 9v3h2v-3h3v-2h-3v-3h-2v3H8v2z"/></svg>
-                      <button class=" text-center text-white text-xl font-medium font-['Lexend'] leading-[25.01px] tracking-wide" onClick={()=>scrollhandler(services)}>Services</button>
+          <header className="w-full h-24 bg-[#e308ea] flex space-x-4">
+            <nav className='flex justify-between items-center w-full px-5 sm:px-10 lg:px-20'>
+              <div className="text-white text-4xl font-bold font-['Lexend'] tracking-wide">HealChat</div>
+              
+              <div className='flex space-x-8 items-center'>
+                {/* Services */}
+                <div className='flex space-x-1 items-center'>
+                  <svg width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" d="M4 22q-.825 0-1.412-.587T2 20V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v12q0 .825-.587 1.413T20 22zm6-16h4V4h-4zm1 9v3h2v-3h3v-2h-3v-3h-2v3H8v2z"/></svg>
+                  <button className="text-white text-xl font-medium font-['Lexend']" onClick={() => scrollhandler(services)}>Services</button>
                 </div>
-
-                <div className='flex space-x-1' >
-                      <svg  width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
-                      <button class=" text-center text-white text-xl font-medium font-['Lexend'] leading-[25.01px] tracking-wide" onClick={()=>scrollhandler(about)}>About</button>
-                </div>
-
-                <div className='flex space-x-1' >
-                      <svg  width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2"/></svg>
-                      <button class=" text-center text-white text-xl font-medium font-['Lexend'] leading-[25.01px] tracking-wide" onClick={()=>scrollhandler(contact)}>Contact </button>
-                </div>
-
                 
-                <div className='flex space-x-1' >
-                      <svg  width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 22v-3c0-2.828 0-4.243-.879-5.121C18.243 13 16.828 13 14 13l-2 2l-2-2c-2.828 0-4.243 0-5.121.879C4 14.757 4 16.172 4 19v3M15.5 6.5v-1a3.5 3.5 0 1 0-7 0v1a3.5 3.5 0 1 0 7 0M16 16v3m1.5-1.5h-3" color="white"/></svg>
-                      <button class=" text-center text-white text-xl font-medium font-['Lexend'] leading-[25.01px] tracking-wide" onClick={()=>scrollhandler(doctors)}>Doctors</button>
+                {/* About */}
+                <div className='flex space-x-1 items-center'>
+                  <svg width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
+                  <button className="text-white text-xl font-medium font-['Lexend']" onClick={() => scrollhandler(about)}>About</button>
                 </div>
-
                 
+                {/* Contact */}
+                <div className='flex space-x-1 items-center'>
+                  <svg width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2"/></svg>
+                  <button className="text-white text-xl font-medium font-['Lexend']" onClick={() => scrollhandler(contact)}>Contact</button>
+                </div>
+                
+                {/* Doctors */}
+                <div className='flex space-x-1 items-center'>
+                  <svg width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 22v-3c0-2.828 0-4.243-.879-5.121C18.243 13 16.828 13 14 13l-2 2l-2-2c-2.828 0-4.243 0-5.121.879C4 14.757 4 16.172 4 19v3M15.5 6.5v-1a3.5 3.5 0 1 0-7 0v1a3.5 3.5 0 1 0 7 0M16 16v3m1.5-1.5h-3" color="white"/></svg>
+                  <button className="text-white text-xl font-medium font-['Lexend']" onClick={() => scrollhandler(doctors)}>Doctors</button>
+                </div>
               </div>
 
-              <div className='flex space-x-10'>
-                <div className='flex space-x-0.5'>
-                <Link to= "/Signin"><div class=" text-black text-[22px] font-medium font-['Lexend'] leading-loose tracking-wide">Login</div></Link>
-                  <div className='pt-2'>
-                    <svg  width="2em" height="2em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M12 20a8 8 0 1 0 0-16" opacity="0.5"/><path stroke-linejoin="round" d="M4 12h10m0 0l-3-3m3 3l-3 3"/></g></svg>
-                  </div>
+              <div className='flex space-x-10 items-center'>
+                {/* Signin */}
+                <div className='flex space-x-1 items-center'>
+                  <Link to="/Signin">
+                    <div className="text-black text-[22px] font-medium font-['Lexend']">Login</div>
+                  </Link>
+                  <svg width="2em" height="2em" viewBox="0 0 24 24">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+                      <path d="M12 20a8 8 0 1 0 0-16" opacity="0.5"/>
+                      <path stroke-linejoin="round" d="M4 12h10m0 0l-3-3m3 3l-3 3"/>
+                    </g>
+                  </svg>
                 </div>
 
-                <div>
-                  <div className='w-36 h-14 bg-white rounded-lg flex p-1'>
-                  <Link to= "/Signup"><div className='px-5'><span className="text-black text-[10px] font-medium font-['Lexend'] leading-2 tracking-wide"></span><span className="text-black text-l font-medium font-['Lexend'] leading-[15.07px] tracking-wide">Create <br/>Account</span><span className="text-black text-[10px] font-medium font-['Lexend'] leading-7 tracking-wide"></span>
-                    </div></Link>
-
-                    <div className='p-2 px-0 pr-7 ml-[-10px]'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h8v8H3zm2 2v4zm8-2h8v8h-8zm2 2v4zM3 13h8v8H3zm2 2v4zm11-2h2v3h3v2h-3v3h-2v-3h-3v-2h3zm-1-8v4h4V5zM5 5v4h4V5zm0 10v4h4v-4z"/></svg>
+                {/* Create Account */}
+                <div className='w-36 h-14 bg-white rounded-lg flex items-center '>
+                  <Link to="/Signup" className="flex items-center">
+                    <div className="px-5">
+                      <span className="text-black text-base font-medium font-['Lexend']">Create <br /> Account</span>
                     </div>
-
-                    
-                  </div>
+                    <div className='p-2 pr-7 ml-[-10px]'>
+                      <svg width="2em" height="2em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M3 3h8v8H3zm2 2v4zm8-2h8v8h-8zm2 2v4zM3 13h8v8H3zm2 2v4zm11-2h2v3h3v2h-3v3h-2v-3h-3v-2h3zm-1-8v4h4V5zM5 5v4h4V5zm0 10v4h4v-4z"/>
+                      </svg>
+                    </div>
+                  </Link>
                 </div>
-                
               </div>
-          </nav>
-        </header>
+            </nav>
+          </header>
 
         <div className='flex justify-between'>
           <div className='p-14 pr-10'>
