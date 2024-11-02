@@ -118,36 +118,61 @@ function Doctordashboard() {
     <div>
 
       <div className='w-full min-h-screen bg-black overflow-hidden '>
-          <div className='w-full bg-[#e308ea] flex p-8 space-x-7'>
-              <div>
-                <button className='flex bg-black rounded-2xl p-4 text-white font-Lexend px-6 w-fit ' onClick={profilesubmit}>
-                  <div className='pr-1'><svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg></div>
-                  Profile</button>
-              </div>
+         <div className='w-full bg-[#e308ea] flex flex-wrap p-4 md:p-8 space-x-4 md:space-x-7'>
+    <div className='flex-shrink-0'>
+      <button className='flex bg-black rounded-2xl p-2 md:p-4 text-white font-Lexend px-4 md:px-6 w-fit' onClick={profilesubmit}>
+        <div className='pr-1'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+            <g fill="none" stroke="white" strokeWidth="2">
+              <path strokeLinejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
+              <circle cx="12" cy="7" r="3" />
+            </g>
+          </svg>
+        </div>
+        Profile
+      </button>
+    </div>
 
+    <div className='flex-shrink-0'>
+      <button className='flex bg-black rounded-2xl p-2 md:p-4 text-white font-Lexend px-4 md:px-6 whitespace-nowrap' onClick={patientslist}>
+        <div className='pr-1'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="white" fillRule="evenodd" d="M3.25 7A.75.75 0 0 1 4 6.25h16a.75.75 0 0 1 0 1.5H4A.75.75 0 0 1 3.25 7m0 5a.75.75 0 0 1 .75-.75h11a.75.75 0 0 1 0 1.5H4a.75.75 0 0 1-.75-.75m0 5a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5H4a.75.75 0 0 1-.75-.75" clipRule="evenodd" />
+          </svg>
+        </div>
+        Patient List
+      </button>
+    </div>
 
-              <div>
-                <button className='flex bg-black rounded-2xl p-4 text-white font-Lexend px-6 whitespace-nowrap' onClick={patientslist} >
-                  <div className='pr-1'><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="M3.25 7A.75.75 0 0 1 4 6.25h16a.75.75 0 0 1 0 1.5H4A.75.75 0 0 1 3.25 7m0 5a.75.75 0 0 1 .75-.75h11a.75.75 0 0 1 0 1.5H4a.75.75 0 0 1-.75-.75m0 5a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5H4a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg></div>
-                  Patient List</button>
-              </div>
+    <div className='flex-shrink-0'>
+      <button className='flex bg-black rounded-2xl p-2 md:p-4 text-white font-Lexend px-4 md:px-6 whitespace-nowrap' onClick={mypatients}>
+        <div className='pr-1'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <path fill="white" d="M16 14q-1.25 0-2.125-.875T13 11t.875-2.125T16 8t2.125.875T19 11t-.875 2.125T16 14m-5 6q-.425 0-.712-.288T10 19v-.9q0-.525.25-1t.7-.75q1.125-.675 2.388-1.012T16 15t2.663.338t2.387 1.012q.45.275.7.75t.25 1v.9q0 .425-.288.713T21 20zm-1-6H4q-.425 0-.712-.288T3 13t.288-.712T4 12h6q.425 0 .713.288T11 13t-.288.713T10 14m4-8H4q-.425 0-.712-.288T3 5t.288-.712T4 4h10q.425 0 .713.288T15 5t-.288.713T14 6m-2.9 4H4q-.425 0-.712-.288T3 9t.288-.712T4 8h8q-.35.425-.562.925T11.1 10" />
+          </svg>
+        </div>
+        My Patients
+      </button>
+    </div>
 
+    <div className='flex items-center flex-grow justify-center md:justify-start font-bold whitespace-nowrap md:pl-10'>
+      <h1 className='font-OpenSans text-2xl md:text-3xl text-center'>DOCTOR DASHBOARD</h1>
+    </div>
 
-              <div>
-                <button className='flex bg-black rounded-2xl p-4 text-white font-Lexend px-6 whitespace-nowrap' onClick={mypatients}>
-                  <div className='pr-1'><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="white" d="M16 14q-1.25 0-2.125-.875T13 11t.875-2.125T16 8t2.125.875T19 11t-.875 2.125T16 14m-5 6q-.425 0-.712-.288T10 19v-.9q0-.525.25-1t.7-.75q1.125-.675 2.388-1.012T16 15t2.663.338t2.387 1.012q.45.275.7.75t.25 1v.9q0 .425-.288.713T21 20zm-1-6H4q-.425 0-.712-.288T3 13t.288-.712T4 12h6q.425 0 .713.288T11 13t-.288.713T10 14m4-8H4q-.425 0-.712-.288T3 5t.288-.712T4 4h10q.425 0 .713.288T15 5t-.288.713T14 6m-2.9 4H4q-.425 0-.712-.288T3 9t.288-.712T4 8h8q-.35.425-.562.925T11.1 10"/></svg></div>
-                  My Patients</button>
-              </div>
-              <div className='flex items-center pl-40 font-bold whitespace-nowrap'>
-                <h1 className='font-OpenSans text-3xl text-center'>DOCTOR DASHBOARD</h1>
-              </div>
-              <div className='pl-60'>
-                <button className='flex bg-black rounded-2xl p-4 text-white font-Lexend px-6 '>
-                  <div className='pr-1'><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5"><path d="M12 20a8 8 0 1 1 0-16" opacity="0.5"/><path stroke-linejoin="round" d="M10 12h10m0 0l-3-3m3 3l-3 3"/></g></svg></div>
-                  Logout</button>
-              </div>
-          </div>
-
+    <div className='flex-shrink-0 md:pl-10'>
+      <button className='flex bg-black rounded-2xl p-2 md:p-4 text-white font-Lexend px-4 md:px-6'>
+        <div className='pr-1'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+            <g fill="none" stroke="white" strokeLinecap="round" strokeWidth="1.5">
+              <path d="M12 20a8 8 0 1 1 0-16" opacity="0.5" />
+              <path strokeLinejoin="round" d="M10 12h10m0 0l-3-3m3 3l-3 3" />
+            </g>
+          </svg>
+        </div>
+        Logout
+      </button>
+    </div>
+  </div>
           {/*profile*/}
 
           {profileview && (<div className='pt-16'>
