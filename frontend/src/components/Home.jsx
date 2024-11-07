@@ -28,7 +28,7 @@ function Home() {
   ];
 
   return (
-    <div className='w-full h-full bg-black'>
+    <div className='w-full h-full bg-black '>
           <header className="w-full h-24 bg-[#e308ea] flex space-x-4">
             <nav className='flex justify-between items-center w-full px-5 sm:px-10 lg:px-20'>
               <div className="text-white text-4xl font-bold font-['Lexend'] tracking-wide">HealChat</div>
