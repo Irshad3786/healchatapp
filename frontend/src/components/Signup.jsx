@@ -14,7 +14,7 @@ function Signup() {
     margin: "0 auto",
     borderColor: "red",
     position: "absolute",
-    top: "70%",
+    top: "72%",
     left: "50%",
     transform: "translate(-50%, -50%)",
   };
@@ -92,7 +92,7 @@ function Signup() {
             color={"magenta"}
             loading={loading}
             cssOverride={override}
-            size={30}
+            size={40}
             aria-label="Loading Spinner"
             data-testid="loader"
           />
