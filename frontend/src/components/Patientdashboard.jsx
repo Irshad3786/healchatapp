@@ -254,7 +254,7 @@ useEffect(() => {
   return (
     <div>
       <div>
-      <h1 className='flex absolute end-80 text-3xl top-7 font-Lexend'>Patients Dashboard</h1>
+      <h1 className='flex absolute end-80 text-3xl top-7 font-Lexend'>Patient Dashboard</h1>
         <div className='bg-[#e308ea] space-x-16 p-4 flex justify-between'>
             
         

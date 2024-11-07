@@ -3,11 +3,24 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import bg from '../assets/bg.png'
+import BeatLoader from "react-spinners/BeatLoader";
 
 function Signup() {
 
-  const navigate = useNavigate()
 
+
+  const override = {
+    display: "block",
+    margin: "0 auto",
+    borderColor: "red",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  };
+
+  const navigate = useNavigate()
+  const [loading, setLoading] = useState(false);
   const[loginoption,setloginoption] = useState("")
   const[viewinputs,setviewinputs] = useState(false)
   const[email,setemail] = useState("")
@@ -33,10 +46,12 @@ function Signup() {
       alert("please enter Password ")
     }
 
+    setLoading(true)
     
     if (loginoption==="doctorlogin"){
       axios.post(`${import.meta.env.VITE_BACKEND_URL}/Doctorsignin`,{email,password})
       .then(response=>{
+        setLoading(false)
         if (response.data === "success") {
           navigate("/Doctordashboard")
         }else if(response.data==="password is incorrect"){
@@ -49,6 +64,7 @@ function Signup() {
     }else if(loginoption === "patientlogin"){
       axios.post(`${import.meta.env.VITE_BACKEND_URL}/Patientsignin`,{email,password})
       .then(response=>{
+        setLoading(false)
         if (response.data==="success"){
           navigate("/Patientdashboard",{state:{email}})
         }else if(response.data==="password is incorrect"){
@@ -71,7 +87,15 @@ function Signup() {
   return (
     <div className='w-full min-h-screen bg-black overflow-hidden'>
 
-
+          <BeatLoader
+            className='pt-8'
+            color={"magenta"}
+            loading={loading}
+            cssOverride={override}
+            size={25}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
 
        <div className='p-5' >
           
