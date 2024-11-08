@@ -60,6 +60,12 @@ function Doctordashboard() {
 
 
   },[navigate,reload])
+
+
+  const logout =()=>{
+    console.log("logout");
+    
+  }
   
   
 
@@ -160,7 +166,7 @@ function Doctordashboard() {
     </div>
 
     <div className='flex-shrink-0 md:pl-10'>
-      <button className='flex bg-black rounded-2xl p-2 md:p-4 text-white font-Lexend px-4 md:px-6'>
+      <button className='flex bg-black rounded-2xl p-2 md:p-4 text-white font-Lexend px-4 md:px-6' onClick={logout}>
         <div className='pr-1'>
           <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
             <g fill="none" stroke="white" strokeLinecap="round" strokeWidth="1.5">
