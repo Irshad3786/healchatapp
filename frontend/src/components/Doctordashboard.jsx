@@ -64,8 +64,11 @@ function Doctordashboard() {
 
 
   const logout =()=>{
-    Cookies.remove("doctorToken")
-    
+    Cookies.remove("doctorToken",{ httpOnly: true, // Keep it secure
+      secure: process.env.NODE_ENV === "production", // Same as when setting the cookie
+      sameSite: "None", // Keep sameSite consistent
+      maxAge: 0, // Expire the cookie immediately
+      expires: new Date(0) })
     navigate("/")
   }
   
