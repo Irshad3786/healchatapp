@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import Cookies from "js-cookie";
 
 function Doctordashboard() {
 
@@ -63,8 +64,8 @@ function Doctordashboard() {
 
 
   const logout =()=>{
-    console.log("logout");
-    
+    Cookies.remove("doctorToken")
+    navigate("/")
   }
   
   
