@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
-import Cookies from "js-cookie";
+
 
 function Doctordashboard() {
 
@@ -64,11 +64,6 @@ function Doctordashboard() {
 
 
   const logout =()=>{
-    Cookies.remove("doctorToken",{ path: "/", 
-      domain: "healchat-api.onrender.com",
-      httpOnly:true, 
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "None" })
 
     navigate("/")
   }
@@ -181,7 +176,7 @@ function Doctordashboard() {
             </g>
           </svg>
         </div>
-        Logout
+        Exit
       </button>
     </div>
   </div>
