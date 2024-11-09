@@ -64,11 +64,10 @@ function Doctordashboard() {
 
 
   const logout =()=>{
-    Cookies.remove("doctorToken",{ httpOnly: true, // Keep it secure
-      secure: process.env.NODE_ENV === "production", // Same as when setting the cookie
-      sameSite: "None", // Keep sameSite consistent
-      maxAge: 0, // Expire the cookie immediately
-      expires: new Date(0) })
+    Cookies.remove("doctorToken",{ path: "/", // Keep it secure
+      domain: "https://healchat-api.onrender.com", // Same as when setting the cookie
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "None" })
     navigate("/")
   }
   
